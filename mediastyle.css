@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Cinzel+Decorative&family=Cutive&family=Montserrat&family=Oswald:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background: #lightpink;
+  color: white;
+  z-index: 2;
+}
+
+.showcase header {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  padding: 0px 50px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  padding-left: 40px;
+  padding-top: 400px;
+  color: black;
+  font-size: 50px;
+}
+
+.showcase video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: lightpink;
+  mix-blend-mode: overlay;
+}
+
+.text{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2{
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 350px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: lightpink;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.text h3{
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+/*css slider for images*/
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 25px;
+  border-style: double;
+  border-width: thick;
+  border-color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1000;
+  align-items: center;
+}
+
+.slides{
+  width: 600%;
+  height: 600px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 3s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 650px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid lightpink;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: all-scroll;
+  transition: 3s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: black;
+}
+
+#radio1:checked ~ .first{
+  margin-left:0;
+}
+
+#radio2:checked ~ .first{
+  margin-left:-20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left:-40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left:-60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 650px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: lightpink;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: lightpink;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: lightpink;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: lightpink;
+}
+
+/*css social media floating footer */
+
+.social{
+  position: absolute;
+  bottom: 40px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 800px;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.social li a:hover{
+  transform: scale(1) translateY(-15px);
+}
+
+.nav{
+  overflow: hidden;
+  opacity: 1.0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.nav a{
+  text-decoration: none;
+  color: #ffffff;
+  float: right;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 20px;
+  padding-right: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  transition: 0.8s ease;
+}
+
+.nav a:hover{
+  background: #FDA3A5;
+  color: black;
+}
+
+@media(max-width: 991px){
+  .showcase,
+  .showcase header {
+      padding: 40px;
+}

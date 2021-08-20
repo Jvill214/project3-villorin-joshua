@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang"en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <title>Media Gallery</title>
+  <link type="text/css" rel="stylesheet" href="css/mediastyle.css">
+</head>
+  <body>
+    <main>
+      <section class="showcase">
+        <header>
+          <h2 class="logo">Media and Gallery</h2>
+          <img src="images/media.png">
+        </header>
+
+        <video src="videos/Homescreen.mov" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+        <h2>Photography and Videography</h2>
+        <a href="https://www.youtube.com/channel/UCHVqwm7OeMYXY6GKdxSawmg/videos">Videos LINK HERE</a>
+        <h3>**Some of my media work</h3>
+        </div>
+        <!--image slider starts here -->
+      <div class="slider">
+        <div class="slides">
+          <!-- Radio buttons start here -->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end here-->
+          <!--slide images start here-->
+          <div class="slide first">
+            <img src="images/1.jpg" alt="canyon">
+          </div>
+          <div class="slide">
+            <img src="images/4.jpg" alt="art">
+          </div>
+          <div class="slide">
+            <img src="images/5.jpg" alt="stadium">
+          </div>
+          <div class="slide">
+            <img src="images/6.jpg" alt="cat">
+          </div>
+          <!--slide images end here-->
+          <!--automatic navigation starts here-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation ends here-->
+        </div>
+        <!--manual nagivation starts here-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!-- Manual nagivation ends here -->
+      </div>
+        <!-- Image slider ends here -->
+        <!--social media buttons start here-->
+        <ul class="social">
+          <li><a href="https://www.facebook.com/joshua.villorin"><img src="images/Facebook.png" alt="Facebook"/></a></li>
+          <li><a href="https://twitter.com/Voicesby_Villo"><img src="images/Twitter.png" alt="Twitter"/></a></li>
+          <li><a href="https://www.instagram.com/jvillo_a/"><img src="images/Instagram.png" alt="Instagram"/></a></li>
+          <li><a href="https://www.linkedin.com/in/joshua-villorin-8908a7154"><img src="images/LinkedIn.png" alt="LinkedIn"/></a></li>
+        </ul>
+        <!--social media buttons end here-->
+      </section>
+
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 6000);
+      </script>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="contactme.html">Contact Me</a>
+        <a href="aboutme.html">About Me</a>
+      </div>
+    </main>
+  </body>
+</html>

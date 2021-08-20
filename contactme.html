@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGYB9WKJD2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NGYB9WKJD2');
+</script>
+  <title>Contact Form</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <link rel="stylesheet" href="css/contactme.css" />
+</head>
+<body>
+  <main>
+    <section class="showcase">
+      <header>
+        <img src="images/E-mail.png">
+        <h2 class="logo">Contact Me</h2>
+      </header>
+
+        <video src="videos/Homescreen.mov" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+          <h2>Thank you for visting my site.</h2>
+          <details>
+            <h3>If you would like to connect, please fill out the form for
+            professional inquiries only</h3>
+          </details>
+        </div>
+
+        <ul class="social">
+          <li><a href="https://www.facebook.com/joshua.villorin"><img src="images/Facebook.png" alt="Facebook"/></a></li>
+          <li><a href="https://twitter.com/Voicesby_Villo"><img src="images/Twitter.png" alt="Twitter"/></a></li>
+          <li><a href="https://www.instagram.com/jvillo_a/"><img src="images/Instagram.png" alt="Instagram"/></a></li>
+          <li><a href="https://www.linkedin.com/in/joshua-villorin-8908a7154"><img src="images/LinkedIn.png" alt="LinkedIn"/></a></li>
+        </ul>
+
+        <div class="container">
+          <h1>Contact Form</h1>
+          <form class="contact-form" id="test_form" name="test_form" method="POST" action="form.php" onsubmit="return validateForm(this)">
+
+           <div class="firstname input-section">
+             <label for="firstname" class="label_input_wrap">First Name:</label>
+             <input type="text" name="req_firstname" id="firstname" placeholder="First Name" />
+           </div>
+
+           <div class="lastname input-section">
+             <label for="lastname" class="label_input_wrap">Last Name:</label>
+             <input type="text" name="req_lastname" id="lastname" placeholder="Last Name" />
+           </div>
+
+           <div class="email input-section">
+             <label for="email" class="label_input-wrap">Email:</label>
+             <input type="email" name="req_email" id="email" placeholder="email@sample.com" />
+           </div>
+
+           <div class="telephone input-section">
+             <label for="telephone" class="label_input_wrap">Telephone:</label>
+             <input type="tel" name="req_telephone" id="telephone" placeholder="305-xxx-xxxx" />
+           </div>
+
+           <div class="comments input-section">
+             <label for="comments" class="label_input_wrap">Comments: </label>
+             <textarea name="comments" id="comments" cols="35" rows="10" placeholder="Your Comments Go Here"></textarea>
+           </div>
+
+           <div class="submit">
+             <input type="submit" value="send" />
+           </div>
+
+         </form>
+
+      </section>
+
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="media.html">Media</a>
+        <a href="contactme.html">Contact Me</a>
+        <a href="aboutme.html">About Me</a>
+      </div>
+  </body>
+</html>
